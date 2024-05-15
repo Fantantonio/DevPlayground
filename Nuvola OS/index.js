@@ -18,12 +18,12 @@ const maximize = function (element_id) {
         element.classList.remove("maximized");
         element.setAttribute("data-maximized", "false");
         element.setAttribute("style", "");
-        icon.src = "img/icons/window-maximize-symbolic.svg";
+        icon.src = "https://raw.githubusercontent.com/Fantantonio/DevPlayground/3a7c92fd206d73b519d2619ec667f59761c22218/Nuvola%20OS/img/icons/window-maximize-symbolic.svg";
     } else {
         element.classList.add("maximized");
         element.setAttribute("data-maximized", "true");
         element.setAttribute("style", "");
-        icon.src = "img/icons/window-restore-symbolic.svg";
+        icon.src = "https://raw.githubusercontent.com/Fantantonio/DevPlayground/3a7c92fd206d73b519d2619ec667f59761c22218/Nuvola%20OS/img/icons/window-restore-symbolic.svg";
     }
 };
 
@@ -192,14 +192,12 @@ windowTerminal
     .addEventListener("mousedown", handleMouseDown);
 
 document.getElementById("time-elapsed").innerText = timeElapsed(
-    "14/05/2024 14:00:00"
+    "15/05/2024 14:00:00"
 );
 const browser_info = getBrowserInfo();
 document.getElementById("browser-info").innerText = browser_info.name;
 document.getElementById("browser-version").innerText =
     browser_info.version;
-document.getElementById("browser-codename").innerText =
-    navigator.appCodeName;
 document.getElementById("browser-language").innerText =
     navigator.language;
 document.getElementById("client-platform").innerText = navigator.platform;
