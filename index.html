@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nuvola OS</title>
+		<meta name="author" content="Antonio Panfili" />
+		<meta
+			name="description"
+			content="Just a project I made for fun in my spare time. Feel free to like it 💚" />
+		<link rel="stylesheet" href="style.css" />
+		<meta
+			name="keywords"
+			content="Operating System, Nuvola OS, Windows 11, Windows 12, Windows 13, Ubuntu, Linux Mint, Debian, CentOS, Fedora, KaliLinux, Cloud OS" />
+	</head>
+	<body style="cursor: default">
+		<div class="datetime-content">
+			<div class="datetime-wrapper">
+				<h1 id="datetime-day">SUNDAY</h1>
+				<h5 id="datetime-date">24 JUNE 2024</h5>
+				<h5 id="datetime-time">- 8:24 AM -</h5>
+			</div>
+
+			<div id="window-terminal" class="window hidden">
+				<div class="window-top-bar">
+					<div>Terminal - Nuvola OS</div>
+					<div style="margin-left: auto">
+						<img
+							class="window-minimize-icon"
+							src="img/icons/window-minimize-symbolic.svg"
+							alt="minimize icon"
+							width="16"
+							height="16"
+							onclick="minimize('window-terminal');" />
+						<img
+							class="window-maximize-icon"
+							src="img/icons/window-maximize-symbolic.svg"
+							alt="maximize icon"
+							width="16"
+							height="16"
+							data-maximized="false"
+							onclick="maximize('window-terminal');" />
+						<img
+							class="window-close-icon"
+							src="img/icons/window-close-symbolic.svg"
+							alt="close icon"
+							width="16"
+							height="16"
+							onclick="closeWindow('window-terminal');" />
+					</div>
+				</div>
+				<div class="window-content" style="padding: 10px 20px">
+					<div style="display: flex">
+						<div class="logo">
+							MMMMMMMMMMMMMMMWWWMMMMMMMMMMMMMMMM<br />
+							MMMMMMMMMMMMMMWKkOXWMMMMMMMMMMMMMM<br />
+							MMMMMMMMMMMMMW0l..oKWMMMMMMMMMMMMM<br />
+							MMMMMMMMMMMMW0c....oKWMMMMMMMMMMMM<br />
+							MMMMMMMMMMMWOc......oKWMMMMMMMMMMM<br />
+							MMMMMMMMMMWOc........oKWMMMMMMMMMM<br />
+							MMMMMMMMMNOc...oxdc...lKWMMMMWX000<br />
+							MMMMMMMMNk....dXWN0lclxKNX0kdodk0N<br />
+							MMMMMMMNk....dXMMMWX0Oxoc..lx0NMMM<br />
+							MMMMWKko..ldOKXOxddo......xNMMMMMM<br />
+							WNKkxddkkkkdo........c.....0WMMMMM<br />
+							K0O00kdl.........cokXW0.....0WMMMM<br />
+							WMMXo.........oOXWWMMMW0c....0WMMM<br />
+							MMXo.......d0NWMMMMMMMMW0.....OWMM<br />
+							MNx....cd0NMMMMMMMMMMMMMM0c...lKMM<br />
+							MWK0KKKNMMMMMMMMMMMMMMMMMMXKKKKNMM<br />
+						</div>
+						<div class="output">
+							<div>
+								<span class="key">Author:</span>
+								<span class="value">
+									<strong
+										><a href="https://www.antoniopanfili.it"
+											>Antonio Panfili</a
+										></strong
+									>
+								</span>
+							</div>
+							<div>
+								<span class="key">Version:</span>
+								<span class="value">1.0.0-alpha</span>
+							</div>
+							<div>
+								<span class="key">Description:</span>
+								<span class="value"
+									>Just a project I made for fun in my spare time. Feel free to
+									like it 💚
+								</span>
+							</div>
+							<div>
+								<span class="key">Uptime:</span>
+								<span id="time-elapsed" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Min-resolution:</span>
+								<span class="value">1200x900</span>
+							</div>
+							<div>
+								<span class="key">Icons:</span>
+								<span class="value">
+									Thanks to:
+									<a
+										href="https://github.com/yeyushengfan258/We10X-icon-theme/tree/master"
+										target="_blank">
+										We10X-icon-theme
+									</a>
+								</span>
+							</div>
+							<div>
+								<span class="key">Background image:</span>
+								<span class="value">
+									<a href="https://leonardo.ai" target="_blank">Leonardo.ai</a>
+								</span>
+							</div>
+							<div>
+								<span class="key">Browser:</span>
+								<span id="browser-info" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Browser version:</span>
+								<span id="browser-version" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Browser code name:</span>
+								<span id="browser-codename" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Language:</span>
+								<span id="browser-language" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Client OS:</span>
+								<span id="client-OS" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Platform:</span>
+								<span id="client-platform" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Timezone:</span>
+								<span id="time-zone" class="value"></span>
+							</div>
+							<div>
+								<span class="key">User agent:</span>
+								<span id="user-agent" class="value"></span>
+							</div>
+							<div>
+								<span class="key">Java enabled:</span>
+								<span id="client-java" class="value"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navbar -->
+		<div class="navbar-container">
+			<nav class="navbar navbar-left">
+				<img
+					id="icon-search"
+					src="img/icons/folder-saved-search-symbolic.svg"
+					alt="search icon"
+					width="32"
+					height="32" />
+				<span
+					style="
+						border-style: solid;
+						border-color: white;
+						border-width: 1px;
+						height: 40px;
+						margin-left: 5px;
+						margin-right: 5px;
+					"></span>
+				<ul>
+					<li>
+						<img
+							src="img/icons/folder-development-symbolic.svg"
+							alt="settings icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/ubiquity-symbolic.svg"
+							alt="update icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/camera-web-symbolic.svg"
+							alt="webcam icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/media-removable-symbolic.svg"
+							alt="usb icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/edit-paste-symbolic.svg"
+							alt="paste icon"
+							width="16"
+							height="16" />
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="navbar">
+				<ul>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/preferences-desktop-display-color.svg" />
+						</a>
+					</li>
+					<li>
+						<div
+							style="
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+							">
+							<a class="bar-img" href="#">
+								<img
+									onclick="show('window-terminal');"
+									onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+									onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+									src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/terminal.svg" />
+							</a>
+							<div id="nav-open-terminal" class="nav-open-window hidden"></div>
+						</div>
+					</li>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/file-manager.svg" />
+						</a>
+					</li>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/abrowser.svg" />
+						</a>
+					</li>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/desktop.svg" />
+						</a>
+					</li>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/smplayer.svg" />
+						</a>
+					</li>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/google-music.svg" />
+						</a>
+					</li>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/apps/scalable/office-calendar.svg" />
+						</a>
+					</li>
+					<li>
+						<a class="bar-img" href="#">
+							<img
+								onmouseover="this.classList.add('scale-in-bottom'); this.classList.remove('scale-out-bottom');"
+								onmouseleave="this.classList.add('scale-out-bottom'); this.classList.remove('scale-in-bottom');"
+								src="https://raw.githubusercontent.com/yeyushengfan258/We10X-icon-theme/5ec70feac22ed9e415850d14c755563c5ff0e225/src/places/16/user-trash.svg" />
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="navbar navbar-right">
+				<ul>
+					<li>
+						<img
+							src="img/icons/display-brightness-symbolic.svg"
+							alt="brightness icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/bluetooth-active-symbolic.svg"
+							alt="bluetooth icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/battery-full-charging-symbolic.svg"
+							alt="battery icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/network-wired-symbolic.svg"
+							alt="network icon"
+							width="16"
+							height="16" />
+					</li>
+					<li>
+						<img
+							src="img/icons/audio-volume-medium-symbolic.svg"
+							alt="volume icon"
+							width="16"
+							height="16" />
+					</li>
+				</ul>
+				<span
+					style="
+						border-style: solid;
+						border-color: white;
+						border-width: 1px;
+						height: 40px;
+						margin-left: 5px;
+						margin-right: 5px;
+					"></span>
+				<img
+					id="icon-notification"
+					src="img/icons/user-invisible-symbolic.svg"
+					alt="volume icon"
+					width="32"
+					height="32" />
+			</nav>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>
