@@ -1,11 +1,11 @@
 
 @font-face {
     font-family: "Dissolve";
-    src: url("font/disolve/Disolve_regular.ttf") format("truetype");
+    src: url("https://raw.githubusercontent.com/Fantantonio/DevPlayground/3a7c92fd206d73b519d2619ec667f59761c22218/Nuvola%20OS/font/disolve/Disolve_regular.ttf") format("truetype");
 }
 @font-face {
     font-family: "Roboto";
-    src: url("font/roboto/Roboto-Light.ttf") format("truetype");
+    src: url("https://raw.githubusercontent.com/Fantantonio/DevPlayground/3a7c92fd206d73b519d2619ec667f59761c22218/Nuvola%20OS/font/roboto/Roboto-Light.ttf") format("truetype");
 }
 
 * {
@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
-    background-image: url("img/background.jpg");
+    background-image: url("https://github.com/Fantantonio/DevPlayground/blob/main/Nuvola%20OS/img/background.jpg?raw=true");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
