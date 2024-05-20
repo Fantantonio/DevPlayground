@@ -1,5 +1,7 @@
 # Nuvola OS - Desktop interface idea made in web
 
+!["JavaScript"](https://img.shields.io/badge/%20-JavaScript-yellow?style=flat-square) !["CSS3"](https://img.shields.io/badge/%20-CSS3-3D85C6?style=flat-square) !["HTML5"](https://img.shields.io/badge/%20-HTML5-EC5A30?style=flat-square)
+
 Just a project I made for fun in my spare time. Feel free to star it ⭐
 
 ## Overview
